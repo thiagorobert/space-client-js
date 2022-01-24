@@ -18,7 +18,7 @@ Method | HTTP request | Description
 ### Example
 
 ```javascript
-import TleApi from 'tle_api';
+import TleApi from 'space-client-js';
 
 let apiInstance = new TleApi.TleApi();
 let tleDecodeReq = new TleApi.TleDecodeReq(); // TleDecodeReq | 
@@ -61,7 +61,7 @@ No authorization required
 ### Example
 
 ```javascript
-import TleApi from 'tle_api';
+import TleApi from 'space-client-js';
 
 let apiInstance = new TleApi.TleApi();
 let tleToOrbitReq = new TleApi.TleToOrbitReq(); // TleToOrbitReq | 
