@@ -15,6 +15,8 @@
 import ApiClient from "../ApiClient";
 import TleDecodeReq from '../model/TleDecodeReq';
 import TleDecodeRes from '../model/TleDecodeRes';
+import TleToCorridorReq from '../model/TleToCorridorReq';
+import TleToCorridorRes from '../model/TleToCorridorRes';
 import TleToOrbitReq from '../model/TleToOrbitReq';
 import TleToOrbitRes from '../model/TleToOrbitRes';
 
@@ -72,6 +74,46 @@ export default class TleApi {
       let returnType = TleDecodeRes;
       return this.apiClient.callApi(
         '/space/v1/tle/decode', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the tleToCorridor operation.
+     * @callback module:api/TleApi~tleToCorridorCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TleToCorridorRes} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {module:model/TleToCorridorReq} tleToCorridorReq 
+     * @param {module:api/TleApi~tleToCorridorCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TleToCorridorRes}
+     */
+    tleToCorridor(tleToCorridorReq, callback) {
+      let postBody = tleToCorridorReq;
+      // verify the required parameter 'tleToCorridorReq' is set
+      if (tleToCorridorReq === undefined || tleToCorridorReq === null) {
+        throw new Error("Missing the required parameter 'tleToCorridorReq' when calling tleToCorridor");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = TleToCorridorRes;
+      return this.apiClient.callApi(
+        '/space/v1/tle/corridor', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

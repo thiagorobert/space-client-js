@@ -12,20 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
+import TleData from './TleData';
 
 /**
- * The TleToOrbitRes model module.
- * @module model/TleToOrbitRes
+ * The TleToCorridorReq model module.
+ * @module model/TleToCorridorReq
  * @version 0.0.1
  */
-class TleToOrbitRes {
+class TleToCorridorReq {
     /**
-     * Constructs a new <code>TleToOrbitRes</code>.
-     * @alias module:model/TleToOrbitRes
+     * Constructs a new <code>TleToCorridorReq</code>.
+     * @alias module:model/TleToCorridorReq
      */
     constructor() { 
         
-        TleToOrbitRes.initialize(this);
+        TleToCorridorReq.initialize(this);
     }
 
     /**
@@ -37,21 +38,18 @@ class TleToOrbitRes {
     }
 
     /**
-     * Constructs a <code>TleToOrbitRes</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>TleToCorridorReq</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/TleToOrbitRes} obj Optional instance to populate.
-     * @return {module:model/TleToOrbitRes} The populated <code>TleToOrbitRes</code> instance.
+     * @param {module:model/TleToCorridorReq} obj Optional instance to populate.
+     * @return {module:model/TleToCorridorReq} The populated <code>TleToCorridorReq</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new TleToOrbitRes();
+            obj = obj || new TleToCorridorReq();
 
-            if (data.hasOwnProperty('orbit')) {
-                obj['orbit'] = ApiClient.convertToType(data['orbit'], 'String');
-            }
-            if (data.hasOwnProperty('visualization')) {
-                obj['visualization'] = ApiClient.convertToType(data['visualization'], 'String');
+            if (data.hasOwnProperty('tleData')) {
+                obj['tleData'] = TleData.constructFromObject(data['tleData']);
             }
         }
         return obj;
@@ -61,19 +59,14 @@ class TleToOrbitRes {
 }
 
 /**
- * @member {String} orbit
+ * @member {module:model/TleData} tleData
  */
-TleToOrbitRes.prototype['orbit'] = undefined;
-
-/**
- * @member {String} visualization
- */
-TleToOrbitRes.prototype['visualization'] = undefined;
+TleToCorridorReq.prototype['tleData'] = undefined;
 
 
 
 
 
 
-export default TleToOrbitRes;
+export default TleToCorridorReq;
 

@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**tleDecode**](TleApi.md#tleDecode) | **POST** /space/v1/tle/decode | 
+[**tleToCorridor**](TleApi.md#tleToCorridor) | **POST** /space/v1/tle/corridor | 
 [**tleToOrbit**](TleApi.md#tleToOrbit) | **POST** /space/v1/tle/orbit | 
 
 
@@ -41,6 +42,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TleDecodeRes**](TleDecodeRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## tleToCorridor
+
+> TleToCorridorRes tleToCorridor(tleToCorridorReq)
+
+
+
+### Example
+
+```javascript
+import TleApi from 'space-client-js';
+
+let apiInstance = new TleApi.TleApi();
+let tleToCorridorReq = new TleApi.TleToCorridorReq(); // TleToCorridorReq | 
+apiInstance.tleToCorridor(tleToCorridorReq, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tleToCorridorReq** | [**TleToCorridorReq**](TleToCorridorReq.md)|  | 
+
+### Return type
+
+[**TleToCorridorRes**](TleToCorridorRes.md)
 
 ### Authorization
 

@@ -16,6 +16,8 @@ import ApiClient from './ApiClient';
 import TleData from './model/TleData';
 import TleDecodeReq from './model/TleDecodeReq';
 import TleDecodeRes from './model/TleDecodeRes';
+import TleToCorridorReq from './model/TleToCorridorReq';
+import TleToCorridorRes from './model/TleToCorridorRes';
 import TleToOrbitReq from './model/TleToOrbitReq';
 import TleToOrbitRes from './model/TleToOrbitRes';
 import TleApi from './api/TleApi';
@@ -76,6 +78,18 @@ export {
      * @property {module:model/TleDecodeRes}
      */
     TleDecodeRes,
+
+    /**
+     * The TleToCorridorReq model constructor.
+     * @property {module:model/TleToCorridorReq}
+     */
+    TleToCorridorReq,
+
+    /**
+     * The TleToCorridorRes model constructor.
+     * @property {module:model/TleToCorridorRes}
+     */
+    TleToCorridorRes,
 
     /**
      * The TleToOrbitReq model constructor.

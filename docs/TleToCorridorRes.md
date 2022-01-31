@@ -1,10 +1,9 @@
-# TleApi.TleToOrbitRes
+# TleApi.TleToCorridorRes
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orbit** | **String** |  | [optional] 
-**visualization** | **String** |  | [optional] 
+**corridor** | **String** |  | [optional] 
 
 

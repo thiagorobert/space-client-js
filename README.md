@@ -123,6 +123,7 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *TleApi.TleApi* | [**tleDecode**](docs/TleApi.md#tleDecode) | **POST** /space/v1/tle/decode | 
+*TleApi.TleApi* | [**tleToCorridor**](docs/TleApi.md#tleToCorridor) | **POST** /space/v1/tle/corridor | 
 *TleApi.TleApi* | [**tleToOrbit**](docs/TleApi.md#tleToOrbit) | **POST** /space/v1/tle/orbit | 
 
 
@@ -131,6 +132,8 @@ Class | Method | HTTP request | Description
  - [TleApi.TleData](docs/TleData.md)
  - [TleApi.TleDecodeReq](docs/TleDecodeReq.md)
  - [TleApi.TleDecodeRes](docs/TleDecodeRes.md)
+ - [TleApi.TleToCorridorReq](docs/TleToCorridorReq.md)
+ - [TleApi.TleToCorridorRes](docs/TleToCorridorRes.md)
  - [TleApi.TleToOrbitReq](docs/TleToOrbitReq.md)
  - [TleApi.TleToOrbitRes](docs/TleToOrbitRes.md)
 
